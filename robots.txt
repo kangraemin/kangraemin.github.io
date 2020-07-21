@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://kangraemin.github.io/sitemap.xml
+Sitemap: https://kangraemin.github.io/sitemap.xml
