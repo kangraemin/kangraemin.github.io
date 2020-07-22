@@ -17,7 +17,7 @@ tags:
 
 예시를 통해 알아 보자. 동네 편의점의 매출이력 ( transaction )이 다음과 같다고 가정하자.
 
-![매출이력](/assets/images/posts/Lotto-Data-Analysis/pic1.png)
+![매출이력](/assets/images/posts/2020-07-21-Lotto-data-analysis/pic1.png)
 
 <center>
   출처 : <a href="https://ratsgo.github.io/machine%20learning/2017/04/08/apriori/">연관 규칙 분석</a>
@@ -99,7 +99,7 @@ df.trans
 summary(df.trans)
 ```
 
-![사진 1](/assets/images/posts/Lotto-Data-Analysis/pic2.png)
+![사진 1](/assets/images/posts/2020-07-21-Lotto-data-analysis/pic2.png)
 
 <center>< 사진 1 ></center>   
 
@@ -119,7 +119,7 @@ summary(rule)
 inspect(sort(rule[1:20],by='lift'))
 ```
 
-![사진 2](/assets/images/posts/Lotto-Data-Analysis/pic3.png)
+![사진 2](/assets/images/posts/2020-07-21-Lotto-data-analysis/pic3.png)
 
 <center>< 사진 2 ></center>
 
