@@ -1,6 +1,6 @@
 ---
 title: Database - (3) 데이터베이스 용어
-date: 2020-07-23
+date: 2020-07-22
 categories:
  - Database
 tags:
@@ -141,7 +141,11 @@ tags:
             - 관련된 데이터를 추가 / 삭제 / 수정 하는데 아무런 문제가 없도록 도와줌
             - 각 테이블의 PK값을 복사 하고 새로운 테이블을 형성
             - 각 테이블의 PK값의 조합은 연결 테이블의 조합 PK값이 됨
-            ![pic1.png](/assets/images/posts/2020-07-23-Terms-of-database/pic1.jpeg)
+            ![pic1.png](/assets/images/posts/2020-07-22-Terms-of-database/pic1.png)
+            <center>
+              출처 : <a href="https://fmhelp.filemaker.com/help/16/fmp/ko/index.html#page/FMP_Help/many-to-many-relationships.html">다대다 관계</a>
+            </center>
+            
 3. 참여의 유형
     - 관계 내의 테이블의 참여는 필수적 / 선택적 일 수 있음
     - 만일 테이블 B에 레코드를 넣기 전에 테이블 A에 적어도 하나의 레코드를 넣어야 한다면 테이블 A의 참여는 필수적
