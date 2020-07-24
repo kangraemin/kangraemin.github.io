@@ -1,1 +1,1 @@
-Kangraemin's tech blog
+https://kangraemin.github.io
