@@ -17,8 +17,8 @@ tags:
 <!-- more -->
 
 > TL;DR (Too Long Didn’t Read)
-> [Github 회원가입 및 저장소 만들기](#Github 회원가입 및 저장소 만들기) 부터 확인 해주시면 됩니다.
-> 잘못된 부분, 추가적인 설명이 필요한 부분이 있으면 꼭 지적 부탁드립니다 !
+> <br><a class="nav-link" href="#github-회원가입-및-저장소-만들기"><span class="nav-text">Github 회원가입 및 저장소 만들기</span></a> 부터 확인 해주시면 됩니다.
+> <br>잘못된 부분, 추가적인 설명이 필요한 부분이 있으면 꼭 지적 부탁드립니다 !
 
 ### Source Code 관리의 필요성
 
