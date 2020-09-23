@@ -9,6 +9,10 @@ tags:
  - Server deployment
 ---
 
+Django 서비스 배포를 위해 AWS의 elasticbeanstalk에 대해 공부한 내용을 정리합니다. 
+
+<!-- more -->
+
 ## Elasticbeanstalk
 
 - 자동적으로 ec2 인스턴스를 생성합니다.
