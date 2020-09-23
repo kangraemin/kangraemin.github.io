@@ -1,6 +1,6 @@
 ---
-title: Android Cook Book (2) - Git / Github / SourceTree를 활용하여 안드로이드 코드 관리하기
-date: 2020-07-25
+title: Django server deployment - AWS elasticbeanstalk
+date: 2020-09-23
 categories:
  - aws
 tags:
