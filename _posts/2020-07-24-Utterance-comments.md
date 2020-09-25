@@ -2,10 +2,11 @@
 title: Jekyll blog에 댓글 추가하기 - Utterance 이용
 date: 2020-07-24
 categories:
- - Etc
+ - Github Page
 tags:
  - Jekyll
  - Utterance
+ - Github Page
 ---
 
 Jekyll을 활용한 Github page는 정적 웹 이기 때문에 Jekyll 만으로는 댓글을 추가 할 수 없습니다. 깃허브 이슈를 활용해 댓글을 달 수 있는 utterance를 활용하여 블로그에 댓글을 추가 해 봅시다.
