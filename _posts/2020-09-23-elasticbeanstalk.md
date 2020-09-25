@@ -20,9 +20,10 @@ Django 서비스 배포를 위해 AWS의 elasticbeanstalk에 대해 공부한 �
 - git branch와 연동하여 test / service 서버 배포를 쉽게 할 수 있습니다.
 - 로드밸런서, 오토 스케일링 등 배포에 필요한 작업들을 자동적으로 진행 해 줍니다. 
 
-### EB CLI를 활용하여 Django 앱 배포 
-참고 : [https://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/create-deploy-python-django.html](https://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/create-deploy-python-django.html)
+## EB CLI를 활용하여 Django 앱 배포 
+> 참고 : [https://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/create-deploy-python-django.html](https://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/create-deploy-python-django.html)
 
+- EB CLI를 설치 한 뒤, `eb init`명령어를 통해 EB 환경 설정을 진행 해 줍니다.
 ```bash
 pipenv install awsebcli --dev
 eb init 
@@ -52,18 +53,17 @@ eb logs
 - `pipenv_to_requirements` 패키지를 활용하면 requirements.txt를 쉽게 생성 할 수 있습니다.
 
 - Git과 EB가 연동 되어 있다면, 커밋 된 내용만 EB에 반영되므로 배포 전 반드시 커밋을 하셔야 합니다. 
-
 ```bash
 eb deploy # EB 배포
 eb open # EB 확인 
 ```
 
-### Elasticbeanstalk 장단점
-장점 
+## Elasticbeanstalk 장단점
+### 장점 
 - 코드 배포가 상당히 간단합니다. 
 - ec2 인스턴스 생성, 로드밸런서 설정 등을 자동적으로 진행 해 줍니다. 
 - git 연동도 상당히 쉬워 서버 배포에 어려움이 없습니다. 
 
-단점
+### 단점
 - 로드밸런서, S3등 자동적으로 만들어지는 서비스가 많아 가격이 비쌀 수 있을 것 같습니다. ( 정확히 확인 되지 않음 ) 
 - AWS에 이미 구축된 서비스의 경우, EB로 옮기기엔 쉽지 않습니다. 
