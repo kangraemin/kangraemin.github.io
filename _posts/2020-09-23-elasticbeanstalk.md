@@ -2,9 +2,9 @@
 title: Django server deployment - AWS elasticbeanstalk
 date: 2020-09-23
 categories:
- - aws
+ - AWS
 tags:
- - aws
+ - AWS
  - Elasticbeanstalk
  - Server deployment
 ---
