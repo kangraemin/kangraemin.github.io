@@ -131,4 +131,4 @@ RDS 콘솔에 들어가서, 생성 한 RDS 클릭 후 `보안 그룹 규칙` 탭
 
 다시 Elastic beanstalk 배포 환경으로 접속 해 보면, 로컬에서 이미 개발한 환경을 deploy 하는 과정 중이라면 데이터베이스 migration이 되지 않았기 떄문에 배포 환경의 setting.py의 DEBUG가 True라면 django error template이 보일 것이고, 아니라면 서버 에러가 뜰 것입니다.
 
-그렇다면 RDS와 EB의 연동은 잘 되었고, 이제 남은 일은 Django의 model과 RDS를 migration 해주는 일입니다. 해당 작업은 다음 포스팅때 진행 하도록 하겠습니다. 
+그렇다면 RDS와 EB의 연동은 잘 되었고, 이제 남은 일은 Django 앱 Database를 RDS에 migration 해주는 일입니다. 해당 작업은 다음 포스팅때 진행 하도록 하겠습니다. 
