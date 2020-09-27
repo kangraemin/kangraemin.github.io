@@ -1,11 +1,11 @@
 ---
-title: Django server deployment - AWS elasticbeanstalk
+title: Django server deployment - AWS Elastic Beanstalk initilize using EB-CLI
 date: 2020-09-23
 categories:
  - AWS
 tags:
  - AWS
- - Elasticbeanstalk
+ - Elastic Beanstalk
  - Server deployment
 ---
 
@@ -38,6 +38,13 @@ option_settings:
   aws:elasticbeanstalk:container:python:
     WSGIPath: config.wsgi 
 ```
+
+- `option_settings`는 Elastic beanstalk를 구성하고 있는 auto scaling, loadbalancer, elasticbeanstalk과 같은 구성 요소들의 셋팅 값을 설정하는 공간입니다. 
+
+- `aws:elasticbeanstalk:container:python`는 python의 환경 변수를 설정 하겠다는 의미입니다. 
+
+- `WSGIPath: config.wsgi`는 WSGIPath의 값을 config.wsgi로 설정 하겠다는 의미입니다. 
+
 - config/wsgi 가 아닌 것에 주의 ! / 를 사용하면 제대로 인식하지 못함 ( 플랫폼 정보 : arn:aws:elasticbeanstalk:ap-northeast-2::platform/Python 3.7 running on 64bit Amazon Linux 2/3.1.1 )
 
 - 아래의 명령어를 통해 EB환경의 로그 ( django error log / http connection log / eb log ... ) 들을 확인 할 수 있습니다. 

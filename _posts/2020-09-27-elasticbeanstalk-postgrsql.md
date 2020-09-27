@@ -1,15 +1,14 @@
 ---
-title: Django server deployment - Elastic beanstalk와 Postgresql RDS 연결하기
+title: Django server deployment - Elastic Beanstalk와 Postgresql RDS 연결하기
 date: 2020-09-27
 categories:
  - AWS
 tags:
  - AWS
- - Elasticbeanstalk
+ - Elastic Beanstalk
  - Server deployment
  - Django
- - S3
- - Django storage
+ - PostgreSQL
 ---
 
 AWS PostgreSQL RDS를 Django환경인 Elastic beanstalk 개발환경에 연결 및 셋팅하는 과정을 공유합니다. 
