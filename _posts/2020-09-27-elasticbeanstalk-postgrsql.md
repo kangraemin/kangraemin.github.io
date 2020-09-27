@@ -1,5 +1,5 @@
 ---
-title: Django server deployment - AWS EB환경에 AWS Postgresql RDS 설치하기
+title: Django server deployment - Elastic beanstalk와 Postgresql RDS 연결하기
 date: 2020-09-27
 categories:
  - AWS
@@ -12,7 +12,7 @@ tags:
  - Django storage
 ---
 
-PostgreSQL을 Django Elastic beanstalk 개발환경에 설치 및 셋팅하는 과정을 공유합니다. 
+AWS PostgreSQL RDS를 Django환경인 Elastic beanstalk 개발환경에 연결 및 셋팅하는 과정을 공유합니다. 
 
 <!-- more -->
 
