@@ -43,7 +43,7 @@ option_settings:
 
 - `n(숫자)_내릴명령어`의 알파벳 순서대로 command를 실행 시킵니다. 
 
-- `command`에는 실행 시킬 command를 입력입력 합니다.
+- `command`에는 실행 시킬 command를 입력 합니다.
 
 - `leader_only`는 Elastic beanstalk에 aws auto scaling에 따라 여러 인스턴스 환경에서 실행 될 때, leader instance만 해당 커멘드를 실행 할 지 말지 결정짓는 값입니다. 해당 값이 True라면, 여러 인스턴스에 배포할 때 한 번만 실행됩니다.
 
@@ -54,7 +54,5 @@ option_settings:
 - `DJANGO_SETTINGS_MODULE: config.settings`는 DJANGO_SETTINGS_MODULE의 값을 config.settings로 설정 하겠다는 의미입니다. 
 
 위 코드를 추가 하고, eb deploy를 진행 한 뒤 배포 환경에 접속 해보면, migration이 된 것을 확인 할 수 있습니다. 
-
-출처 : [https://stackoverflow.com/questions/62457165/deploying-django-to-elastic-beanstalk-migrations-failed](https://stackoverflow.com/questions/62457165/deploying-django-to-elastic-beanstalk-migrations-failed)
 
 위 과정 중 `ToolError: Command 01_migrate failed`로 실패 한다면, [이 글](https://kangraemin.github.io/aws/2020/09/28/elasticbeanstalk-migration-error/)을 참조 해 주세요
