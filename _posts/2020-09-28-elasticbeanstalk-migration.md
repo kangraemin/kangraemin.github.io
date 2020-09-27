@@ -19,7 +19,7 @@ Elastic beanstalk에 배포 되어 있는 Django 서버를 AWS PostgreSQL RDS에
 
 로컬에서는 Django model 작업을 진행 한 뒤, manage.py를 통해 makemigration 및 migration을 진행 할 수 있습니다. 
 
-이 작업을 [이전 포스팅](https://kangraemin.github.io/aws/2020/09/28/elasticbeanstalk-postgrsql/)에서 yum을 통해 `postgresql-devel`을 설치 한 것 처럼, `.ebextension`에 명령어를 추가 해 줌으로써 통해 진행 할 수 있습니다. 
+이 작업을 [이전 포스팅](https://kangraemin.github.io/aws/2020/09/27/elasticbeanstalk-postgrsql/)에서 yum을 통해 `postgresql-devel`을 설치 한 것 처럼, `.ebextension`에 명령어를 추가 해 줌으로써 통해 진행 할 수 있습니다. 
 
 [AWS 공식 문서](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-django.html)의 `Add a database migration configuration file` 부분에서 확인 할 수 있습니다. 
 
