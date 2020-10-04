@@ -16,9 +16,9 @@ Zappa를 활용하여 Django 프로젝트를 API Gateway + Lambda를 활용한 �
 
 <!-- more -->
 
-## 서버리스
+## 서버리스   
 
-### 서버리스란 ?
+### 서버리스란 ?   
 
 서버리스의 단어 그대로를 직역 해보자면, `서버가 없는`으로 해석 될 수 있습니다. 
 
@@ -32,9 +32,9 @@ AWS Lambda를 활용한 서버리스 시스템 에서는 백엔드 코드를 Lam
 
 서버가 존재하긴 하지만 유저로 부터 요청이 들어 올 때마다 함수(코드)가 돌아가는 시간동안 서버를 **대여했다가 함수 실행이 끝나면 반납 하는 구조** 인것입니다.  
 
-### 서버리즈 장점 
+### 서버리즈 장점  
 
-1. 개발의 편리성 
+#### 1. 개발의 편리성    
 
 예전에 AWS EC2를 활용한 클라이언트-서버 시스템은 AWS EC2에 본인이 만든 백엔드 코드를 업로드 하고, 앱을 가동시켜 서버 역할을 하게 해주는 컴퓨터를 대여하여 서버를 구축하는 방식이었습니다. 
 
@@ -44,7 +44,7 @@ AWS Lambda를 활용한 서버리스 시스템 에서는 백엔드 코드를 Lam
 
 하지만 Lambda를 활용한 서버리스 시스템은 이미 Lambda안에 Auto scaling이나 로드밸런싱이 **적용 되어 있기 때문**에 개발자가 따로 설정을 해주지 않아도 됩니다.
 
-2. 가격
+#### 2. 가격   
 
 이 대여 한 만큼에 대한 비용만 지불 하면 되기 때문에, 서버를 계속해서 가동 시키는 형태 보다 저렴 할 수 있습니다. ( 실제 람다의 가격 : 요청 1백만 건당 0.20 USD, AWS 서울 리전 기준 [AWS Lambda pricing](https://aws.amazon.com/ko/lambda/pricing/) )
 
@@ -52,13 +52,13 @@ AWS Lambda를 활용한 서버리스 시스템 에서는 백엔드 코드를 Lam
 
 ### 서버리스 단점
 
-1. 서버 공급 회사에 강한 의존성을 띄게 됩니다. 
+#### 1. 서버 공급 회사에 강한 의존성을 띄게 됩니다.    
 
 AWS Lambda를 활용한 서버리스 서버를 구축하여 서비스 중인 경우에, AWS회사가 갑자기 망해버리는 경우 ... 도 있을 수 있고, 또 가격 정책을 AWS가 변경 할 경우 대응 하기 힘들어집니다. 
 
 또 한 회사에 많이 의존 하게 되기 떄문에, AWS를 사용하다가 Azure나 다른 서비스로 이관 시키는 작업이 필요 할 경우, 옮겨 가는것이 힘이 듭니다. 
 
-2. 학습이 어려움 
+#### 2. 학습이 어려움    
 
 AWS Lambda를 활용한 서버리스 서버 구축의 경우, 한국어 자료가 EC2 배포에 비해 빈약 합니다. 
 
@@ -66,13 +66,11 @@ AWS Lambda를 활용한 서버리스 서버 구축의 경우, 한국어 자료�
 
 ## Zappa 
 
-Zappa는 AWS 기능들을 활용한 Serverless 구조를 활용하여 Python 백엔드 코드를 배포하는데 도움을 주는 패키지 입니다. 
+Zappa([Zappa 공식 Github](https://github.com/Miserlou/Zappa))는 AWS 기능들을 활용한 Serverless 구조를 활용하여 Python 백엔드 코드를 배포하는데 도움을 주는 패키지 입니다. 
 
 Zappa를 통해 API Gateway, S3 연동 등을 좀 더 쉽게 할 수 있으며 배포 과정도 상당히 쉽게 배포 할 수 있도록 도와줍니다. 
 
-[Zappa 공식 Github](https://github.com/Miserlou/Zappa)
-
-1. zappa 설치 
+#### 1. zappa 설치    
 
 ```bash
 pip install zappa 
@@ -80,7 +78,7 @@ pip install zappa
 
 > 이 과정 중에, 이미 Elastic beanstalk CLI가 설치 되어 있는 가상환경에 설치하려고 한다면 ebcli와 zappa가 충돌을 일으키게 됩니다. 둘 중 하나를 삭제 후 재설치 하시면 해결됩니다. 
 
-2. AWS IAM 정보 발급 
+#### 2. AWS IAM 정보 발급    
 
 AWS에 접속 하셔셔, `AWS IAM`계정을 생성 해 주세요. ( [공식 문서](https://docs.aws.amazon.com/ko_kr/IAM/latest/UserGuide/introduction.html) 참조 )
 
@@ -88,17 +86,17 @@ AWS에 접속 하셔셔, `AWS IAM`계정을 생성 해 주세요. ( [공식 문�
 
 ```bash
 [default]
-AWS_ACCESS_KEY_ID= # IAM에서 생성한 ACCESS_KEY
-AWS_SECRET_ACCESS_KEY= # IAM에서 생성한 SECRET_KEY
+AWS_ACCESS_KEY_ID = # IAM에서 생성한 ACCESS_KEY
+AWS_SECRET_ACCESS_KEY = # IAM에서 생성한 SECRET_KEY
 
 [zappa]
-AWS_ACCESS_KEY_ID= # IAM에서 생성한 ACCESS_KEY
-AWS_SECRET_ACCESS_KEY= # IAM에서 생성한 SECRET_KEY
+AWS_ACCESS_KEY_ID = # IAM에서 생성한 ACCESS_KEY
+AWS_SECRET_ACCESS_KEY = # IAM에서 생성한 SECRET_KEY
 ```
 
 이렇게 생성 해놓으면, AWS별로 KEY값들을 관리하기 수월 해 집니다. 
 
-3. Set up zappa
+#### 3. Set up zappa   
 
 ```bash
 $zappa init
@@ -169,7 +167,7 @@ Enjoy!,
  ~ Team Zappa!
 ```
 
-4. region 추가 
+#### 4. region 추가    
 
 위 과정을 거치면, 프로젝트의 루트에 `zappa_settings.json`가 생성 됩니다. 
 
@@ -179,7 +177,7 @@ Enjoy!,
 
 여기서 `aws_region` 항목을 `ap-northeast-2`로 추가 해주어 `서울`지역으로 설정 해 줍니다. ( `ap-northeast-2`는 서울을 의미합니다. 다른 지역은 [AWS 공식 문서](https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/using-regions-availability-zones.html)를 참조 해주세요 )
 
-5. Zappa 배포
+#### 5. Zappa 배포   
 
 ```bash
 $ zappa deploy
