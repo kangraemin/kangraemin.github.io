@@ -1,5 +1,5 @@
 ---
-title: Zappa를 이용하여 AWS Lambda에 Django 배포하기
+title: Zappa를 이용하여 AWS Lambda에 Django 배포하기 (1)
 date: 2020-10-03
 categories:
  - AWS
