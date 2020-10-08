@@ -1,5 +1,5 @@
 ---
-title: Django server deployment - Elastic Beanstalk에 migration 진행하기
+title: Elastic Beanstalk - Django AWS postgresql RDS migration 진행하기
 date: 2020-09-28
 categories:
  - Django

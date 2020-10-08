@@ -1,5 +1,5 @@
 ---
-title: Django server deployment - AWS Elastic Beanstalk initilize using EB-CLI
+title: Elastic Beanstalk CLI 사용하여 Django 배포하기
 date: 2020-09-23
 categories:
  - Django
