@@ -2,13 +2,13 @@
 title: Django 서버 에러 받기 - sentry 사용하기
 date: 2020-09-28
 categories:
- - AWS
+ - Django
 tags:
  - AWS
  - Elastic Beanstalk
  - Server deployment
  - Django
- - Sentry.io
+ - Sentry
 ---
 
 Elastic beanstalk에 배포 되어 있는 Django 서버에서, 서버 에러가 날 시 에러 리포트를 받아 볼 수 있는 Sentry.io를 적용하는 방법을 공유합니다.

@@ -2,7 +2,7 @@
 title: Django server deployment - Elastic Beanstalk에 migration 진행하기
 date: 2020-09-28
 categories:
- - AWS
+ - Django
 tags:
  - AWS
  - Elastic Beanstalk

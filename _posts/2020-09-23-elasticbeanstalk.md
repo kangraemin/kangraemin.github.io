@@ -2,7 +2,7 @@
 title: Django server deployment - AWS Elastic Beanstalk initilize using EB-CLI
 date: 2020-09-23
 categories:
- - AWS
+ - Django
 tags:
  - AWS
  - Elastic Beanstalk

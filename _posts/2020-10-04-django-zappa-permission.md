@@ -2,7 +2,7 @@
 title: Zappa를 이용하여 AWS Lambda에 Django 배포하기 - Add IAM Permission (2)
 date: 2020-10-04
 categories:
- - AWS
+ - Django
 tags:
  - AWS
  - Zappa

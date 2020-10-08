@@ -2,7 +2,7 @@
 title: Elastic Beanstalk "Command 01_migrate failed" Error
 date: 2020-09-28
 categories:
- - AWS
+ - Django
 tags:
  - AWS
  - Elastic Beanstalk

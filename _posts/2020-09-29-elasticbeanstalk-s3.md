@@ -2,7 +2,7 @@
 title: Django server deployment - Elastic Beanstalk s3 활용하기 ( static file )
 date: 2020-09-29
 categories:
- - AWS
+ - Django
 tags:
  - AWS
  - Elastic Beanstalk
