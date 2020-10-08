@@ -1,5 +1,5 @@
 ---
-title: Django server deployment - sentry.io 사용하기
+title: Django 서버 에러 받기 - sentry 사용하기
 date: 2020-09-28
 categories:
  - AWS
