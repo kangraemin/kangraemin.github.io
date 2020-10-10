@@ -1,5 +1,5 @@
 ---
-title: Zappa를 이용하여 AWS Lambda에 Django 배포하기 - Add IAM Permission (2)
+title: Zappa를 활용하여 Django 배포하기 - not authorized to perform error
 date: 2020-10-04
 categories:
  - Django
