@@ -7,7 +7,7 @@ tags:
  - iOS
 ---
 
-> iOS에 대해 공부 한 것들을 공유합니다. 이번 포스트에선, UILabel의 size를 text에 알맞게 조정하는 방법에 대해 공유합니다. 
+> 이번 포스트에선, iOS의 UILabel의 크기를 text에 알맞게 조정하는 방법에 대해 공유합니다. 
 
 <!-- more -->
 
@@ -97,5 +97,3 @@ class CalculatorViewController: UIViewController {
 ![pic4.png](/assets/images/posts/2021-01-20-iOS-label-width/pic4.png)
 - intrinsicContentSize 프로퍼티는, 뷰 안의 컨텐츠( 본 포스트의 UILabel에선 text에 해당 ) 의 실질적인 크기를 리턴 해 줍니다. ((intrinsicContentSize() Docs)[https://developer.apple.com/documentation/uikit/uiview/1622600-intrinsiccontentsize])
 - 해당 프로퍼티를 활용하여, UILabel의 크기를 뷰 안의 컨텐츠의 크기를 알아내고, 해당 컨텐츠의 크기에 UILabel의 크기를 맞춤으로써 화면의 모든 텍스트를 표기 할 수 있습니다.
-
-> 개인적으로 공부 중에 작성한 포스트 입니다. 틀린 점 있으면 꼭 지적 부탁드립니다. 
