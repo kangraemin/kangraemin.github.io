@@ -2,9 +2,9 @@
 title: iOS - image set에서 1x, 2x, 3x 이미지를 사용하는 이유
 date: 2021-01-21
 categories:
- - iOS
+ - IOS
 tags:
- - iOS
+ - IOS
 ---
 
 > 픽셀 / 포인트 개념을 바탕으로 iOS 프로젝트에 png 이미지를 추가할 때 image set의 1x, 2x, 3x 이미지에 대해서 공부 한 것을 공유합니다.

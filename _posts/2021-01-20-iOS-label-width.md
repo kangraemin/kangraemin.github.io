@@ -2,9 +2,9 @@
 title: iOS - UILabel 크기를 텍스트에 맞추기
 date: 2021-01-20
 categories:
- - iOS
+ - IOS
 tags:
- - iOS
+ - IOS
 ---
 
 > iOS의 UILabel의 크기를 text에 알맞게 조정하는 방법에 대해 공유합니다. 
