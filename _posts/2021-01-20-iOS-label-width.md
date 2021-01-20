@@ -7,7 +7,7 @@ tags:
  - iOS
 ---
 
-> 이번 포스트에선, iOS의 UILabel의 크기를 text에 알맞게 조정하는 방법에 대해 공유합니다. 
+> iOS의 UILabel의 크기를 text에 알맞게 조정하는 방법에 대해 공유합니다. 
 
 <!-- more -->
 
