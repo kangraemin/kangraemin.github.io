@@ -1,6 +1,6 @@
 ---
 title: iOS - UILabel 크기를 텍스트에 맞추기
-date: 2020-11-10
+date: 2021-01-20
 categories:
  - iOS
 tags:
