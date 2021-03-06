@@ -1,5 +1,5 @@
 ---
-title: Kotlin collection - Filter / Partition / Test
+title: Kotlin collection - Filter / Partition / Test predicates ( any / all / none )
 date: 2021-03-06
 categories:
  - Android
@@ -8,7 +8,7 @@ tags:
  - Collection
 ---
 
-> Kotlin Collection 공식 문서를 정리 한 글입니다. Collection의 Filter operator에 대해 알아봅니다. 
+> Kotlin Collection 공식 문서를 정리 한 글입니다. Collection의 filter operator에 대해 알아봅니다. 
 
 <!-- more -->
 

@@ -8,7 +8,7 @@ tags:
  - Collection
 ---
 
-> Kotlin Collection 공식 문서를 정리 한 글입니다. Collection의 Transform operator에 대해 알아봅니다. 
+> Kotlin Collection 공식 문서를 정리 한 글입니다. Collection의 transform operator에 대해 알아봅니다. 
 
 <!-- more -->
 
