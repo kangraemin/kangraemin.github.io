@@ -8,11 +8,11 @@ tags:
  - Collection
 ---
 
-> Kotlin Collection 공식 문서를 정리 한 글입니다. Collection의 List / Set / Map에 대한 기초적인 설명을 정리합니다.
+Kotlin Collection 공식 문서를 정리 한 글입니다. Collection의 List / Set / Map에 대한 기초적인 설명을 정리합니다.
+
+아래에 적힌 Kotlin 코드들은 [Github repo](https://github.com/kangraemin/kotlin_study/blob/master/kangraemin/collection/src/CollectionOverview.kt) 에서 확인 하실 수 있습니다. 
 
 <!-- more -->
-
-> 아래에 적힌 Kotlin 코드들은 [Github repo](https://github.com/kangraemin/kotlin_study/blob/master/kangraemin/collection/src/CollectionOverview.kt) 에서 확인 하실 수 있습니다. 
 
 ## Collection Overview
 

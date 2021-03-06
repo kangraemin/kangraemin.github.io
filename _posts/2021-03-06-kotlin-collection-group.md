@@ -8,11 +8,11 @@ tags:
  - Collection
 ---
 
-> Kotlin Collection 공식 문서를 정리 한 글입니다. Collection의 group operator에 대해 알아봅니다. 
+Kotlin Collection 공식 문서를 정리 한 글입니다. Collection의 group operator에 대해 알아봅니다. 
+
+아래에 적힌 Kotlin 코드들은 [Github repo](https://github.com/kangraemin/kotlin_study/blob/master/kangraemin/collection/src/Group.kt) 에서 확인 하실 수 있습니다. 
 
 <!-- more -->
-
-> 아래에 적힌 Kotlin 코드들은 [Github repo](https://github.com/kangraemin/kotlin_study/blob/master/kangraemin/collection/src/Group.kt) 에서 확인 하실 수 있습니다. 
 
 ## Group elements operator
 
