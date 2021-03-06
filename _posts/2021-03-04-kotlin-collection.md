@@ -1,6 +1,6 @@
 ---
-title: Kotlin collection - 
-date: 2021-03-05
+title: Kotlin collection - Collection overview 
+date: 2021-03-04
 categories:
  - Android
 tags:
@@ -8,7 +8,7 @@ tags:
  - Collection
 ---
 
-> 
+> Kotlin Collection 공식 문서를 정리 한 글입니다. Collection의 List / Set / Map에 대한 기초적인 설명을 정리합니다.
 
 <!-- more -->
 
