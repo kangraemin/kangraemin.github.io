@@ -8,7 +8,7 @@ tags:
  - Collection
 ---
 
-> Kotlin Collection 공식 문서를 정리 한 글입니다. Collection의 retrieve collection parts operator에 대해 알아봅니다. 
+> Kotlin Collection 공식 문서를 정리 한 글입니다. Collection의 Map specific operator에 대해 알아봅니다. 
 
 [Github repo](https://github.com/kangraemin/kotlin_study/blob/master/kangraemin/collection/src/MapOperator.kt) 에서 아래에 적힌 Kotlin 코드들을 확인 하실 수 있습니다. 
 
