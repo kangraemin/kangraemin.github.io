@@ -1,5 +1,5 @@
 ---
-title: Kotlin collection - List operator - indexOf / binary search / / sort
+title: Kotlin collection - List operator - indexOf / binary search / sort
 date: 2021-03-11
 categories:
  - Android
@@ -8,17 +8,17 @@ tags:
  - Collection
 ---
 
-> Kotlin Collection 공식 문서를 정리 한 글입니다. Collection의 retrieve collection parts operator에 대해 알아봅니다. 
+> Kotlin Collection 공식 문서를 정리 한 글입니다. Collection의 List specific operator에 대해 알아봅니다. 
+
+[Github repo](https://github.com/kangraemin/kotlin_study/blob/master/kangraemin/collection/src/ListOperator.kt) 에서 아래에 적힌 Kotlin 코드들을 확인 하실 수 있습니다. 
 
 <!-- more -->
-
-> 아래에 적힌 Kotlin 코드들은 [Github repo](https://github.com/kangraemin/kotlin_study/blob/master/kangraemin/collection/src/RetrieveSingleElement.kt) 에서 확인 하실 수 있습니다. 
 
 ## List-specific operator
 
 ### Retrieve elements by index
 
-- 참고 : [https://www.notion.so/Collection-944ef43da01a4ae4bdb12c0e08bc9e19#ae2b03224db845eeb74ff546008d2a91](https://www.notion.so/Collection-944ef43da01a4ae4bdb12c0e08bc9e19#ae2b03224db845eeb74ff546008d2a91)
+- 참고 : [Kotlin collection single elements operator 포스팅](https://kangraemin.github.io/android/2021/03/07/kotlin-collection-retrieve-single/)
 
 ### Retrieve list parts
 
@@ -174,3 +174,5 @@ println("Shuffle: $numbers")
 numbers.reverse()
 println("Reverse: $numbers")
 ```
+
+출처 : [https://kotlinlang.org/docs/list-operations.html#retrieve-elements-by-index](https://kotlinlang.org/docs/list-operations.html#retrieve-elements-by-index)
