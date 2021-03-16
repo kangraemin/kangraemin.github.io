@@ -8,7 +8,7 @@ tags:
  - Collection
 ---
 
-> POJO 클래스와 비교하며 Kotlin의 data class에 대해 알아봅니다.
+POJO 클래스와 비교하며 Kotlin의 data class에 대해 알아봅니다.
 
 [Github repo](https://github.com/lu-lay/kotlin_study/tree/kangraemin/kangraemin/src) 에서 아래에 적힌 Kotlin 코드들을 확인 하실 수 있습니다. 
 
