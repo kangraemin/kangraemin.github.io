@@ -78,9 +78,9 @@ tags:
                 otherPojoClass.setTextData("text");
 
                 System.out.println(pojoClass.toString()); // PojoClass@1be6f5c3        
-        				System.out.println(otherPojoClass); // PojoClass@6b884d57
+        		System.out.println(otherPojoClass); // PojoClass@6b884d57
                 System.out.println("is it equal two instance = " + (pojoClass == otherPojoClass)); // false 
-        				System.out.println("is it equal two instance = " + (pojoClass.equals(otherPojoClass))); // false
+        		System.out.println("is it equal two instance = " + (pojoClass.equals(otherPojoClass))); // false
             }
         }
         ```
