@@ -1,5 +1,5 @@
 ---
-title: Python 얕은 복사와 immutable 변수, small integer caching
+title: Python 얕은 복사와 immutable 변수
 date: 2021-03-19
 categories:
  - Python
