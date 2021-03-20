@@ -16,23 +16,22 @@ IntelliJ 기반의 IDE ( Android Studio / PyCharm / IntelliJ ... ) 등에서 정
 
 <!-- more -->
 
-아래에 소개된 단축키들은 개인적으로 어떤 것을 더 많이 사용하고 적게 사용하고 판단 할 수 없을정도로 정말 많이 사용하고 있는 단축키들 입니다. 
-
-한번쯤 써보시는걸 꼭 추천드립니다
+> 아래에 소개된 단축키들은 개인적으로 어떤 것을 더 많이 사용하고 적게 사용하고 판단 할 수 없을정도로 정말 많이 사용하고 있는 단축키들 입니다. 
+> 한번쯤 써보시는걸 꼭 추천드립니다
 
 1. Add Selection for Next Occurrence
 
-Keymap의 `Main menu | Edit | Find | Add Selection for Next Occurrence` 항목 이며, macOS에서는 `control` + `G` 이며, 저는 vsCode와 동일하게 사용하기 위해 `cmd` + `D`로 변경 한 뒤 사용하고 있습니다. 
+    Keymap의 `Main menu | Edit | Find | Add Selection for Next Occurrence` 항목 이며, macOS에서는 `control` + `G` 이며, 저는 vsCode와 동일하게 사용하기 위해 `cmd` + `D`로 변경 한 뒤 사용하고 있습니다. 
 
-현재 선택하고 있는 블록과 동일한 텍스트를 찾아 선택 해 줍니다. 
+    현재 선택하고 있는 블록과 동일한 텍스트를 찾아 선택 해 줍니다. 
 
-선택할 때 대소문자, 띄어쓰기를 구분합니다. 
+    선택할 때 대소문자, 띄어쓰기를 구분합니다. 
 
-![1-next-occurence.gif](/assets/images/posts/2021-03-18-IntelliJ-keymap/1-next-occurence.gif)
+    ![1-next-occurence.gif](/assets/images/posts/2021-03-18-IntelliJ-keymap/1-next-occurence.gif)
 
-![2-next-occurence-2.gif](/assets/images/posts/2021-03-18-IntelliJ-keymap/2-next-occurence-2.gif)
+    ![2-next-occurence-2.gif](/assets/images/posts/2021-03-18-IntelliJ-keymap/2-next-occurence-2.gif)
 
-정말 많은 용도로 사용하고 있지만, 위와 같이 xml의 id 값을 선택하여 Kotlin / Java 코드에 가져올 때 정말 편하게 사용 할 수 있습니다. 
+    정말 많은 용도로 사용하고 있지만, 위와 같이 xml의 id 값을 선택하여 Kotlin / Java 코드에 가져올 때 정말 편하게 사용 할 수 있습니다. 
 
 2. Search everywhere
 
