@@ -18,7 +18,8 @@ IntelliJ 기반의 IDE ( Android Studio / PyCharm / IntelliJ ... ) 등에서 정
 
 > 아래에 소개된 단축키들은 개인적으로 어떤 것을 더 많이 사용하고 적게 사용하고 판단 할 수 없을정도로 정말 많이 사용하고 있는 단축키들 입니다. 
 > 한번쯤 써보시는걸 꼭 추천드립니다
-> macOS 기준으로 서술되어 있어 window의 단축키는 적어놓지 않았으나, keymap의 이름을 적어 놓았으니 preference - keymap 항목에 가셔셔 keymap의 이름을 검색하시면 해당 기능이 어떤 키에 매핑되어 있는지를 확인 하실 수 있습니다. 
+
+macOS 기준으로 서술되어 있어 window의 단축키는 적어놓지 않았으나, keymap의 이름을 적어 놓았으니 preference - keymap 항목에 가셔셔 keymap의 이름을 검색하시면 해당 기능이 어떤 키에 매핑되어 있는지를 확인 하실 수 있습니다. 
 
 ## Add Selection for Next Occurrence
 
