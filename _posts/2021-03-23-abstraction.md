@@ -38,20 +38,17 @@ Java, Kotlin에서, 대부분은 한번 쯤 interface / abstract class ( 추상 
     package playground.abstraction.onlyclass
 
     class Teacher {
-        fun sayStudentName(student: Student) {
-            print("Hey ! ${student.name}! ")
-        }
-
         fun makeStudentToClean(student: Student) {
+            print("Hey ! ${student.name}! ")
             when (student) {
                 is StudentForFloorCleaning -> {
-                    println("바닥을 쓸거라")
+                    student.cleanUpFloor()
                 }
                 is StudentForWindowCleaning -> {
-                    println("창문을 닦거라")
+                    student.cleanUpWindow()
                 }
                 is StudentForBlackboardCleaning -> {
-                    println("칠판을 닦거라")
+                    student.cleanUpBlackboard()
                 }
             }
         }
@@ -64,17 +61,17 @@ Java, Kotlin에서, 대부분은 한번 쯤 interface / abstract class ( 추상 
     open class Student(val name: String)
 
     class StudentForFloorCleaning(name: String) : Student(name) {
-        fun startCleanUp() {
+        fun cleanUpFloor() {
             println("$name : 바닥 쓸기 시작하겠습니다 !")
         }
     }
     class StudentForWindowCleaning(name: String) : Student(name) {
-        fun startCleanUp() {
+        fun cleanUpWindow() {
             println("$name : 창문 닦기 시작하겠습니다 !")
         }
     }
     class StudentForBlackboardCleaning(name: String) : Student(name) {
-        fun startCleanUp() {
+        fun cleanUpBlackboard() {
             println("$name : 칠판 닦기 시작하겠습니다 !")
         }
     }
@@ -103,23 +100,17 @@ Java, Kotlin에서, 대부분은 한번 쯤 interface / abstract class ( 추상 
 
         // 바닥 쓸기 학생 청소
         floorStudents.forEach {
-            teacher.sayStudentName(it)
             teacher.makeStudentToClean(it)
-            it.startCleanUp()
         }
 
         // 창문 닦이 학생 청소
         windowStudents.forEach {
-            teacher.sayStudentName(it)
             teacher.makeStudentToClean(it)
-            it.startCleanUp()
         }
 
         // 칠판 닦이 학생 청소
         blackboardStudents.forEach {
-            teacher.sayStudentName(it)
             teacher.makeStudentToClean(it)
-            it.startCleanUp()
         }
     }
     ```
