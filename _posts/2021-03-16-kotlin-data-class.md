@@ -5,7 +5,6 @@ categories:
  - Android
 tags:
  - Kotlin
- - Data Class
 ---
 
 POJO 클래스와 비교하며 Kotlin의 data class에 대해 알아봅니다.
