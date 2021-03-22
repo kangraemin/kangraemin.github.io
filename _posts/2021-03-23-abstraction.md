@@ -5,7 +5,6 @@ categories:
  - Android
 tags:
  - Kotlin
- - Collection
 ---
 
 Java, Kotlin에서, 대부분은 한번 쯤 interface / abstract class ( 추상 클래스 )라는 말을 들어 본 적이 있을 것입니다. 이 둘은 왜 쓰는 것이고, 어떨 때 사용하는지 알아보도록 합시다. 
