@@ -187,6 +187,10 @@ POJO 클래스와 비교하며 Kotlin의 data class에 대해 알아봅니다.
 
 - Data를 갖고 있기 위한 클래스
 - Data를 위한 기본적인 기능, 함수들을 제공 해 줌
+- DataClass를 생성하기 위해선 아래의 조건을 반드시 따라야 함
+    - 주 생성자에는, 반드시 하나 이상의 parameter가 들어가 있어야 함
+    - 주 생성자의 모든 parameter들은, `val` 또는 `var` 로 선언 되어야 함
+    - DataClass는 `abstract`, `open`, `sealed`, `inner` 클래스가 될 수 없음
 
     ```kotlin
     data class User(val name: String, var age: Int)
@@ -297,7 +301,112 @@ POJO 클래스와 비교하며 Kotlin의 data class에 대해 알아봅니다.
         println(user === sameCopiedUser) // false
         ```
 
-- DataClass를 생성하기 위해선 아래의 조건을 반드시 따라야 함
-    - 주 생성자에는, 반드시 하나 이상의 parameter가 들어가 있어야 함
-    - 주 생성자의 모든 parameter들은, `val` 또는 `var` 로 선언 되어야 함
-    - DataClass는 `abstract`, `open`, `sealed`, `inner` 클래스가 될 수 없음
+    - Inheritance
+        - data class에 클래스를 상속 시키고, 부모 클래스에서 `equals` / `hashCode` / `toString` 함수 등을 final 키워드를 붙여 override 하면, 부모 클래스에서 override한 함수를 그대로 사용 ( 자동 생성 해주지 않음 )
+
+        ```kotlin
+        data class User(val name: String, var age: Int) : UserSuperClass()
+
+        open class UserSuperClass {
+            final override fun equals(other: Any?): Boolean {
+                return super.equals(other)
+            }
+
+            final override fun hashCode(): Int {
+                return super.hashCode()
+            }
+
+            final override fun toString(): String {
+                return super.toString()
+            }
+        }
+        ```
+
+        ```kotlin
+        ----Get property 확인----
+        29
+        rams
+        ----Set property 확인----
+        User@2f2c9b19
+        User@2f2c9b19
+        ----toString 함수 확인----
+        User@2f2c9b19
+        User@2f2c9b19
+        ----equals 함수 확인----
+        false
+        false
+        false
+        ----hashCode 확인----
+        false
+        false
+        ----ComponentN 확인----
+        rams
+        29
+        ----destructuring declarations 확인----
+        rams
+        29
+        rams
+        ----copy 확인----
+        User@1c20c684
+        false
+        false
+        false
+        false
+
+        Process finished with exit code 0
+        ```
+
+    - Interface / Abstract class
+        - Interface / Abstract class 상속 하여 사용 가능
+
+        ```kotlin
+        fun sampleCodeForInterface() {
+            val duck = Duck("Donald", 123)
+            duck.cry() // Quack
+
+            val dog = Dog("Snoopy", 3000)
+            dog.cry() // Bow
+
+            val penguin = Penguin("Peng", 13)
+            penguin.eat() // Nyam
+            penguin.somethingNormal
+        }
+
+        abstract class AbstractAnimal {
+            abstract fun cry()
+        }
+
+        interface Animal {
+            fun cry()
+        }
+
+        open class AnimalClass {
+            val somethingNormal = "somethingNormal"
+
+            fun eat() {
+                println("Nyam")
+            }
+        }
+
+        data class Duck(val name: String, val age: Int): AbstractAnimal() {
+            override fun cry() {
+                println("Quack")
+            }
+        }
+
+        data class Dog(val name: String, val age: Int): Animal {
+            override fun cry() {
+                println("Bow")
+            }
+        }
+
+        data class Penguin(val name: String, val age: Int): AnimalClass() {
+
+        }
+
+        // 데이터 클래스 끼리의 상속은 안됨 ( open keyword 가 안붙음 )
+        data class ParentAnimal(val name: String, val age: Int)
+
+        // Function 'component1' generated for the data class conflicts with member of supertype 'ParentAnimal'
+        //data class Dog(val firstElement: String): ParentAnimal()
+        ```
