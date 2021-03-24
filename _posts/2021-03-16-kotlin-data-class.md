@@ -19,7 +19,7 @@ POJO 클래스와 비교하며 Kotlin의 data class에 대해 알아봅니다.
 
 - 자바에서는, Data를 담아두기 위한 용도로 POJO 클래스 ( Plain Old Java Object )를 자주 활용합니다.
 
-#### 아래에서 사용할 POJO 예시
+#### * 아래에서 사용할 POJO 예시
 
 ```java
 public class PojoClass {
@@ -43,11 +43,11 @@ public class PojoClass {
 }
 ```
 
-### POJO 클래스에서 개선하면 좋을 요소들
+### * POJO 클래스에서 개선하면 좋을 요소들
 
 - 하지만 위의 예시 처럼 POJO 클래스를 정의하여 사용한다면 아래의 문제점들이 있습니다. 
 
-#### 데이터를 표현하는 `toString()` 메소드의 결과값이 명확한 의미를 전달하지 않습니다.  
+#### 1. 데이터를 표현하는 `toString()` 메소드의 결과값이 명확한 의미를 전달하지 않습니다.  
 
 ```java
 public class JavaMain {
@@ -70,7 +70,7 @@ public String toString() {
 - 위의 코드에서, pojoClass를 콘솔 출력 했을 때 ( String으로 변환 했을 때 ), `toString()` 함수를 통해 변환 됩니다.
 - 하지만, String 클래스에 정의된 `toString()` 함수는, 클래스의 이름과 해당 객체의 hash 값으로 이루어 져 있어 해당 객체에 대한 정보 ( 아래의 예에선 numberData / textData 에 대한 정보 )를 유추 할 수 없습니다. 
 
-#### 두 객체의 동등성 비교에 사용될 비교 기준이 명확하지 않습니다.
+#### 2. 두 객체의 동등성 비교에 사용될 비교 기준이 명확하지 않습니다.
 
 ```java
 public class JavaMain {
@@ -155,7 +155,7 @@ public class JavaMain {
 
 - 위 경우, `equals()` 가 정의 되어 있고, 객체의 타입과 객체 속 모든 값이 같다면 true를 반환 하기 때문에, `pojoClassEqaul` 객체와, `otherPojoClassEqaul` 객체는 동일하다고 판단합니다.
 
-#### `hashCode()` 함수에 대한 구현이 정의되어 있지 않습니다.
+#### 3. `hashCode()` 함수에 대한 구현이 정의되어 있지 않습니다.
 
 - 위 `equals()` 함수를 정의한 클래스에서, `hashCode()` 함수는 정의 되지 않았습니다.
 - `hashCode()` 함수가 정의 되지 않아, hash함수를 먼저 비교하는 `hashSet` 등의 클래스에서 해당 객체를 다룰 때 문제가 있을 수 있습니다.
@@ -198,13 +198,13 @@ public class JavaMain {
 - Data를 갖고 있기 위한 코틀린 클래스 입니다. 
 - Data를 위한 기본적인 기능, 함수들을 제공 해 줍니다.
 
-#### DataClass를 생성하기 위해선 아래의 조건을 반드시 따라야 합니다.
+#### * DataClass를 생성하기 위해선 아래의 조건을 반드시 따라야 합니다.
 
 - 주 생성자에는, 반드시 하나 이상의 parameter가 들어가 있어야 합니다.
 - 주 생성자의 모든 parameter들은, `val` 또는 `var` 로 선언 되어야 합니다.
 - DataClass는 `abstract`, `open`, `sealed`, `inner` 클래스가 될 수 없습니다.
 
-#### 예시에 쓰일 Data class 
+#### * 예시에 쓰일 Data class 
 
 ```kotlin
 data class User(val name: String, var age: Int)
@@ -214,7 +214,7 @@ val user = User(name = "rams", age = 29)
 
 - 위 처럼 data class를 선언 시, 아래의 함수들을 기본적으로 제공 해 줍니다.
 
-#### Property Get / Set 
+#### 1. Property Get / Set 
 
 - 위와 같이 data class를 정의 했을 때, age / name 데이터를 get / set 하는 메소드를 따로 정의하지 않아도 직관적으로 바로 사용 가능 합니다. 
 
@@ -234,7 +234,7 @@ user.age = 29
 println(user) // User(name=rams, age=29)
 ```
 
-#### 좀 더 직관적인 형태의 toString 메소드 제공
+#### 2. 좀 더 직관적인 형태의 toString 메소드 제공
 
 - POJO 클래스 객체의 toString 값이 클래스 이름 + hashCode 값이 출력되는것과는 달리, 객체의 값을 확인 할 수 있도록 자동으로 toString 함수를 구현 해 줍니다.
 
@@ -245,7 +245,7 @@ println(user) // User(name=rams, age=29)
 println(user.toString()) // User(name=rams, age=29)
 ```
 
-#### 좀 더 직관적인 형태의 equals 메소드 제공 
+#### 3. 좀 더 직관적인 형태의 equals 메소드 제공 
 
 - Java 클래스에서는, 따로 equals를 overide하여 정의하지 않을 시, object 클래스에 있는 equals 메소드를 사용 합니다. 
 - POJO 클래스 객체 끼리의 동등성 비교를 할 때엔, 객체 안의 값이 모두 같아도 false가 리턴 됩니다. 
@@ -261,7 +261,7 @@ println(user == otherUser) // false
 println(user === sameUser) // false
 ```
 
-#### hashCode() 메소드 제공 
+#### 4. hashCode() 메소드 제공 
 
 - Java 클래스 에서는, 따로 hashCode를 overide 하여 정의하지 않을 시, object 클래스에 있는 hashCode 메소드를 사용 하게 됩니다.
 - 따라서, 같은 객체라 하더라도 hashCode의 값이 다를 수 있습니다. 
@@ -276,7 +276,7 @@ println(user.hashCode() == sameUser.hashCode()) // true
 println(hashSet.contains(sameUser)) // true
 ```
 
-#### Component N 메소드 제공 
+#### 5. Component N 메소드 제공 
 
 - Data class 안의 property 중 N번쨰 값을 리턴해주는 함수 입니다. 
 
@@ -287,7 +287,7 @@ println(user.component1()) // rams
 println(user.component2()) // 29
 ```
 
-#### destructuring declarations
+#### 6. destructuring declarations
 
 - data class 안의 property들을 한번에 꺼내어 변수에 할당 할 수 있습니다. 
 - 내부적으로 componentN을 활용하여 꺼내기 때문에, 선언하는 변수들의 순서가 중요하게 됩니다. 
@@ -306,7 +306,7 @@ println(ageTest) // rams
 // val (name, age, error) = user
 ```
 
-#### copy 메소드 제공
+#### 7. copy 메소드 제공
 
 - 생성된 data class 객체와 대부분의 값은 비슷한데, 특정 값만 바꾼 다른 객체를 생성 하고 싶을 때 주로 사용 합니다. 
 - 복사 된 객체는, 원래의 객체와는 독립적인 객체가 됩니다. 
@@ -323,7 +323,7 @@ println(user.hashCode() == sameCopiedUser.hashCode()) // true
 println(user === sameCopiedUser) // false
 ```
 
-#### Inheritance
+#### 8. Inheritance
 
 - data class에 클래스를 상속 시키고, 부모 클래스에서 `equals` / `hashCode` / `toString` 함수 등을 final 키워드를 붙여 override 하면, 부모 클래스에서 override한 함수를 그대로 사용 하게 됩니다.( 자동 생성 해주지 않아 원하는 동작을 하지 않을 수 있습니다. )
 
@@ -377,7 +377,7 @@ false
 false
 ```
 
-#### Interface / Abstract class
+#### 9. Interface / Abstract class
 
 - Data class에 Interface / Abstract class를 상속 하여 사용 할 수 있습니다. 
 
