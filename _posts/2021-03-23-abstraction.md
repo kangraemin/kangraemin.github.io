@@ -158,8 +158,8 @@ Java, Kotlin에서, 대부분은 한번 쯤 interface / abstract class ( 추상 
         val hallwayStudents = mutableListOf<StudentForHallwayCleaning>()
 
         for (number in 1..5) {
-        		// 복도 닦이 학생 생성
-        		hallwayStudents.add(StudentForHallwayCleaning("복도 닦이 학생 $number"))
+            // 복도 닦이 학생 생성
+            hallwayStudents.add(StudentForHallwayCleaning("복도 닦이 학생 $number"))
         }
 
         // 복도 닦이 학생 청소
@@ -205,7 +205,7 @@ Interfaces in Kotlin can contain declarations of abstract methods, as well as me
 
     ```java
     interface ExampleInterface {
-    		void exampleMethod();
+        void exampleMethod();
     } 
     ```
 
@@ -374,8 +374,8 @@ Interfaces in Kotlin can contain declarations of abstract methods, as well as me
     ```kotlin
 
     for (number in 1..5) {
-    		// 복도 닦이 학생 생성
-    		cleaningCrewCollection.add(StudentForHallWayCleaning("복도 닦이 학생 $number"))
+        // 복도 닦이 학생 생성
+        cleaningCrewCollection.add(StudentForHallWayCleaning("복도 닦이 학생 $number"))
     }
 
     ```
