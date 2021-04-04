@@ -5,3 +5,34 @@
 {% else %}
   {{ post.content }}
 {% endif %}
+
+{% for cat in post.categories %}
+  {% assign cat_url_encode = cat | url_encode | replace: '+', '%20' %}
+  {% assign cat_length = post.categories.size %}
+  <div class="more-posts">
+    <div class="more-category">
+      <h4>"{{ cat }}" 카테고리의 최근 포스팅</h4>
+      <a href="{{ '/category/#/' | relative_url | append: cat_url_encode }}" class="more-button" style="border: 0px;">카테고리 모든 글 보기</a>
+    </div>
+    {% assign count = 0 %}
+      <table style="border: 0px; margin: 0px;">
+        <tbody>
+          {% for post in site.posts %}
+            {% if post.categories == page.categories %}
+              {% assign count = count | plus: 1 %}
+              {% if count < 11 %}
+                  <tr style="border: 0px;">
+                    <th class="more-posts-title" style="border: 0px;">
+                      <a href="{{ site.url }}{{ post.url }}">
+                        {{ post.title }}
+                      </a>
+                    </th>
+                    <td style="border: 0px;" class="more-posts-date"><span style="float: right;">{{ post.date | date: '%Y. %m. %d' }}</span></td>
+                  </tr>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </tbody>
+      </table>
+  </div>
+{% endfor %}
