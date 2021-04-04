@@ -67,10 +67,20 @@ Git commit에 서명하는 방법은 여러가지가 있지만 ( GPG / S/MIME ) 
 먼저, 본인이 발급받은 gpg key가 있는지 확인합니다. 
 
 ```bash
-$ gpg --list-keys
+$ gpg --list-secret-keys --keyid-format LONG
 ```
 
-gpg 키가 위 명령어를 통해 아래와 같이 표출된다면, asdf부터 보면됩니다. 
+gpg 키가 위 명령어를 통해 아래와 같이 표출된다면, Check GPG keys부터 보시면 됩니다. 
+
+```bash
+$ gpg --list-secret-keys --keyid-format LONG
+
+------------------------------
+sec   rsa4096/766E06F1431AC0B0 2021-04-03 [SC]
+      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+uid                 [ultimate] kangraemin (kangraemin) <remin1994@gmail.com>
+ssb   rsa4096/xxxxxxxxxxxxxx 2021-04-03 [E]
+```
 
 아래와 같이 나온다면 gpg 설치부터 진행 합니다.
 
