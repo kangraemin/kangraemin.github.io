@@ -13,7 +13,7 @@ tags:
 
 학교에서 알려주지 않는 17가지 실무 개발 기술  - 이기곤 저
 
-![pic1.png](/assets/images/posts/2021-04-18-default-tech-study/pic1.png)
+![pic1.png](/assets/images/posts/2021-04-18-default-tech-study/pic1.jpeg)
 
 ## 책의 구성 및 평가
 
