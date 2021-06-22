@@ -21,14 +21,25 @@
             {% if post.categories == page.categories %}
               {% assign count = count | plus: 1 %}
               {% if count < 11 %}
-                  <tr style="border: 0px;">
-                    <th class="more-posts-title" style="border: 0px;">
-                      <a href="{{ site.url }}{{ post.url }}">
-                        {{ post.title }}
-                      </a>
+                {% if post.url == page.url %}
+                  <tr style="border: 0px; background: #f5f5f5;">
+                    <th class="more-posts-title" style="border: 0px;" >
+                        <a href="{{ site.url }}{{ post.url }}">
+                          {{ post.title }}
+                        </a>
                     </th>
                     <td style="border: 0px;" class="more-posts-date"><span style="float: right;">{{ post.date | date: '%Y. %m. %d' }}</span></td>
                   </tr>
+                {% else %}
+                  <tr style="border: 0px;">
+                    <th class="more-posts-title" style="border: 0px;">
+                        <a href="{{ site.url }}{{ post.url }}">
+                          {{ post.title }}
+                        </a>
+                    </th>
+                    <td style="border: 0px;" class="more-posts-date"><span style="float: right;">{{ post.date | date: '%Y. %m. %d' }}</span></td>
+                  </tr>
+                {% endif %}
               {% endif %}
             {% endif %}
           {% endfor %}
