@@ -138,7 +138,7 @@
 
 {% comment %} Canonical, good for google search engine (SEO) : https://support.google.com/webmasters/answer/139066 {% endcomment %}
 {% if site.canonical %}
-  <link rel="canonical" href="{{ site.url }}{{ post.url }}"/>
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}"/>
 {% endif %}
 
 {% include _partials/head/custom-head.html %}
