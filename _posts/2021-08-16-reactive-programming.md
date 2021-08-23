@@ -1,5 +1,5 @@
 ---
-title: 반응형 프로그래밍 이란, RxJava란 - Reactive Programming이 무엇인가 
+title: RxJava 강의 2 - 반응형 프로그래밍 이란, RxJava란 - Reactive Programming이 무엇인가 
 date: 2021-08-16
 categories:
  - Android

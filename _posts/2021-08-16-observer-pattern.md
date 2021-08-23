@@ -1,5 +1,5 @@
 ---
-title: 옵저버 패턴 이란, Observer Pattern
+title: RxJava 강의 1 - 옵저버 패턴 이란, Observer Pattern
 date: 2021-08-16
 categories:
  - Android
