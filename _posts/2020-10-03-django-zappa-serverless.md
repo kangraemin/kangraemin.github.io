@@ -187,5 +187,6 @@ $ zappa deploy
 
 오류에 대응하기 위한 추가적인 설정에 대해서는 다음 포스팅에 추가적으로 서술 하겠습니다. 
 
-
+#### 6. troposphere 버전 이슈 
+ zappa 배포 도중 `AttributeError: 'Template' object has no attribute 'add_description'` 에러가 발생하면, troposphere을 3 미만의 버전을 사용하시면 해결됩니다.troposphere = "<3"
 
