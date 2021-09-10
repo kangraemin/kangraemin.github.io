@@ -71,7 +71,7 @@ class PercentTextView : AppCompatTextView, RamsObserver<Int> {
 }
 ```
 
- 이렇게 Observer를 직접 만들어도 되지만, 앞선 포스팅 ( [Stream 구현체의 종류 ( Observable / Flowable / Single ... )](https://kangraemin.github.io/android/2021/08/31/stream-implementation/) )을 살펴보면, Stream의 구현체 마다 발행하는 이벤트가 달라 관찰자에 필요한 함수가 다를 수 있음을 살펴 보았습니다. 
+ 이렇게 Observer를 직접 만들어도 되지만, 앞선 포스팅 ( [Stream 구현체의 종류 ( Observable / Flowable / Single ... )](https://kangraemin.github.io/android/2021/08/31/stream-implementation/) )에서는, Stream의 구현체 마다 발행하는 이벤트가 달라 관찰자에 필요한 함수가 다를 수 있음을 살펴 보았습니다. 
 
  따라서, RxJava2에서는 각 Stream의 관찰자 객체를 개발자가 직접 개발하지 않기 위해, 각 이벤트 마다 할 행동을 정의하여 subscribe operator의 인자로 넘겨 주면, subscribe 함수의 내부적으로 Observer를 생성 해 주고 있습니다. 
 
