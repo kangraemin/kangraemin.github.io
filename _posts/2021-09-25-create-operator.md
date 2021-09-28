@@ -1,5 +1,5 @@
 ---
-title: RxJava 강의 8 - Create / Just / Defer / FromCallable /Interval ...
+title: RxJava 강의 8 - Create / Just / Defer / FromCallable / Interval ...
 date: 2021-09-25
 categories:
  - Android
