@@ -8,6 +8,7 @@ tags:
  - Bundle
 ---
  
+Android 에서 자주 쓰이는 Bundle 에 대해서 알아봅니다. 
 
 <!-- more -->
 
