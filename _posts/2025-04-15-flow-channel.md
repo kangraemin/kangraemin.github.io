@@ -6,12 +6,12 @@ categories:
 tags:
  - Android
  - Kotlin
+ - Coroutine
  - Flow
  - Channel 
 ---
 
-채널은 내부적으로 LinkedList 기반의 큐 구조를 사용해 송신자와 수신자를 관리하며, 채널이 가득 차거나 수신자가 준비되지 않은 경우 송신자와 수신자 모두 suspend 상태가 되어 데이터 전달이 지연됩니다.
-또한 RENDEZVOUS, BUFFERED, CONFLATED, UNLIMITED 등 각 채널 타입은 고유의 버퍼링 전략과 동기화 메커니즘을 제공하여, 상황에 맞게 데이터 전송 흐름을 세밀하게 조절할 수 있습니다.
+Coroutine 에서 자주 쓰이는 Channel 에 대해서 알아봅니다. 
 
 <!-- more -->
 
@@ -19,7 +19,6 @@ tags:
 
 <aside>
 💡 Channel 이 LinkedList 기반의 queue 를 사용하여 송, 수신자를 관리하기 때문
-
 </aside>
 
 - 송신자 ( sender )
