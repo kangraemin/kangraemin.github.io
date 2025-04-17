@@ -1,5 +1,5 @@
 ---
-title: Hile - ComponentScope     
+title: Hilt - ComponentScope     
 date: 2025-04-16
 categories:
  - Android
