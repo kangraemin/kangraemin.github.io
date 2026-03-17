@@ -1,0 +1,25 @@
+{
+  "version": "d69db20",
+  "installed_at": "2026-03-18T06:23:23.581561",
+  "files": [
+    "agents/dev.md",
+    "agents/intent.md",
+    "agents/lead.md",
+    "agents/qa.md",
+    "agents/verifier.md",
+    "agents/guides/tc-guide.md",
+    "skills/dev-bounce/SKILL.md",
+    "skills/update-bouncer/SKILL.md",
+    "hooks/hooks.json",
+    "hooks/plan-gate.sh",
+    "hooks/bash-gate.sh",
+    "hooks/doc-reminder.sh",
+    "hooks/bash-audit.sh",
+    "hooks/completion-gate.sh",
+    "hooks/stop-active-cleanup.sh",
+    "hooks/subagent-track.sh",
+    "hooks/subagent-cleanup.sh",
+    "hooks/lib/resolve-task.sh",
+    "scripts/update-check.sh"
+  ]
+}
