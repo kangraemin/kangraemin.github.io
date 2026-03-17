@@ -4,6 +4,7 @@
 # ---------------------------------------------------------------
 
 # Site
+timezone: Asia/Seoul
 title: Ram's
 subtitle:
 description: Ram's tech blog
