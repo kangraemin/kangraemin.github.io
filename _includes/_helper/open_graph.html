@@ -19,7 +19,7 @@
   {% assign site_name = site.title %}
   {% assign language = page.language | default: site.language %}
   {% assign updated = page.updated %}
-  {% assign twitter_card = 'summary' %}
+  {% assign twitter_card = 'summary_large_image' %}
 
   {% if description %}
     {% assign description = description | strip_html | strip |
@@ -64,12 +64,13 @@
   {% endif %}
 
   {% if language %}
-    <meta property="og:locale" content="{{ language }}">
+    <meta property="og:locale" content="{% if language == 'ko' %}ko_KR{% else %}{{ language }}{% endif %}">
     <!--newline-->
   {% endif %}
 
+  {% if images.size == 0 %}{% assign images = images | push: site.og_image %}{% endif %}
   {% for image in images %}
-    <meta property="og:image" content="{{ image }}">
+    <meta property="og:image" content="{{ image | absolute_url }}">
     <!--newline-->
   {% endfor %}
 
@@ -87,7 +88,7 @@
   {% endif %}
 
   {% if images.size != 0 %}
-    <meta name="twitter:image" content="{{ images[0] }}">
+    <meta name="twitter:image" content="{{ images[0] | absolute_url }}">
     <!--newline-->
   {% endif %}
 

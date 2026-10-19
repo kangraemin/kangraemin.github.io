@@ -112,6 +112,8 @@
 {% assign fb_app_id = site.fb_app_id %}
 {% include _helper/open_graph.html %}
 {{ open_graph }}
+{% include _partials/head/jsonld.html %}
+<link rel="alternate" type="text/plain" title="llms.txt" href="{{ '/llms.txt' | absolute_url }}" />
 
 {% comment %} Export some HEXO Configurations to Front-End {% endcomment %}
 <script type="text/javascript" id="hexo.configurations">

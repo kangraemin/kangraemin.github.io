@@ -5,12 +5,12 @@
 
 # Site
 timezone: Asia/Seoul
-title: Ram's
+title: Ram's 개발 블로그
 subtitle:
-description: Ram's tech blog
+description: 안드로이드 개발자 강래민이 코틀린·코루틴·JVM과 Claude Code 같은 AI 에이전트 자동화를 직접 만들고 겪은 것을 정리하는 블로그
 author: Raemin
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
-language: en
+language: ko
 date_format: '%Y-%m-%d'
 
 # URL
@@ -80,7 +80,7 @@ plugins:
 favicon: /assets/favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Jekyll, NexT"
+keywords: "안드로이드, 코틀린, 코루틴, JVM, Claude Code, AI 에이전트, 자동화"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -737,3 +737,4 @@ images: assets/images
 
 # Theme version
 version: 5.1.1
+og_image: https://kangraemin.github.io/assets/og.png

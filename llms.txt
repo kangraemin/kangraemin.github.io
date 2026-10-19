@@ -1,0 +1,18 @@
+---
+layout: null
+sitemap: false
+permalink: /llms.txt
+---
+# {{ site.title }}
+
+> {{ site.description }}
+
+- 작성자: 강래민(안드로이드 개발자) — https://github.com/kangraemin
+- 글 {{ site.posts.size }}개, 최근 글 {{ site.posts.first.date | date: "%Y-%m-%d" }}
+- 피드: {{ '/atom.xml' | absolute_url }} · 사이트맵: {{ '/sitemap.xml' | absolute_url }}
+
+## 주제별 글
+{% assign cats = site.categories | sort %}{% for c in cats %}
+### {{ c[0] }}
+{% for p in c[1] %}- [{{ p.title | strip }}]({{ p.url | absolute_url }}): {{ p.date | date: "%Y-%m-%d" }}{% if p.description %} — {{ p.description | strip_newlines | truncate: 120 }}{% endif %}
+{% endfor %}{% endfor %}

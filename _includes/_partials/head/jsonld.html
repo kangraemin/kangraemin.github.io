@@ -1,0 +1,18 @@
+{% comment %} 검색엔진·AI 검색용 구조화 데이터(JSON-LD). 글은 BlogPosting, 나머지는 WebSite+Person {% endcomment %}
+{% assign author_ld = '{"@type":"Person","@id":"' | append: site.url | append: '/#me","name":"강래민","alternateName":"Raemin Kang","url":"' | append: site.url | append: '/about/","jobTitle":"안드로이드 개발자","sameAs":["https://github.com/kangraemin"]}' %}
+<script type="application/ld+json">
+{% if page.layout == 'post' %}
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":{{ page.title | jsonify }},"description":{{ page.description | default: page.excerpt | strip_html | strip_newlines | truncate: 160 | jsonify }},
+  "url":{{ page.url | absolute_url | jsonify }},"mainEntityOfPage":{{ page.url | absolute_url | jsonify }},"inLanguage":"ko-KR",
+  "datePublished":{{ page.date | date_to_xmlschema | jsonify }},"dateModified":{{ page.updated | default: page.date | date_to_xmlschema | jsonify }},
+  "image":{{ site.og_image | jsonify }},"keywords":{{ page.tags | join: ', ' | jsonify }},"author":{"@id":"{{ site.url }}/#me"},"isPartOf":{"@id":"{{ site.url }}/#site"}},
+ {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":{{ site.title | jsonify }},"item":"{{ site.url }}/"}{% if page.categories.size > 0 %},{"@type":"ListItem","position":2,"name":{{ page.categories[0] | jsonify }},"item":"{{ site.url }}/categories/"}{% endif %},{"@type":"ListItem","position":{% if page.categories.size > 0 %}3{% else %}2{% endif %},"name":{{ page.title | jsonify }},"item":{{ page.url | absolute_url | jsonify }}}]},
+ {{ author_ld }},
+ {"@type":"WebSite","@id":"{{ site.url }}/#site","name":{{ site.title | jsonify }},"url":"{{ site.url }}/","inLanguage":"ko-KR"}]}
+{% else %}
+{"@context":"https://schema.org","@graph":[
+ {"@type":"WebSite","@id":"{{ site.url }}/#site","name":{{ site.title | jsonify }},"url":"{{ site.url }}/","inLanguage":"ko-KR","description":{{ site.description | jsonify }},"publisher":{"@id":"{{ site.url }}/#me"}},
+ {{ author_ld }}]}
+{% endif %}
+</script>
