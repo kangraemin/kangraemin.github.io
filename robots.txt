@@ -3,3 +3,4 @@ Allow: /
 
 Sitemap: https://kangraemin.github.io/sitemap.xml
 Sitemap: https://kangraemin.github.io/jeju-stay/sitemap.xml
+Sitemap: https://kangraemin.github.io/oneul-kkum/sitemap.xml
