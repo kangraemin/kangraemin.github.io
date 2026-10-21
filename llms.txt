@@ -10,7 +10,6 @@ permalink: /llms.txt
 - 작성자: 강래민(안드로이드 개발자) — https://github.com/kangraemin
 - 글 {{ site.posts.size }}개, 최근 글 {{ site.posts.first.date | date: "%Y-%m-%d" }}
 - 피드: {{ '/atom.xml' | absolute_url }} · 사이트맵: {{ '/sitemap.xml' | absolute_url }}
-- 만든 서비스: [오늘꿈해몽](https://kangraemin.github.io/oneul-kkum/) — 꿈해몽·띠별 운세·나이표·손없는날·공휴일 달력
 
 ## 주제별 글
 {% assign cats = site.categories | sort %}{% for c in cats %}
